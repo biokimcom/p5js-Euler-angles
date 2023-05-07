@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p5.js example</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: monospace;
+      font-size: 16px;
+      background-color: #ffffff
+    }
+
+    #pageContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #pageContainer>div {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-evenly;
+      margin: 0px 10px;
+    }
+
+    #controlsContainer {
+      width: 250px;
+      flex-grow: 2;
+    }
+
+    #controlsContainer label {
+      padding: 15px;
+    }
+  </style>
+ 
+   <script src="../p5.min.js"></script>
+   <script src="../p5.js"></script>
+   <script src="sketch.js"></script>
+</head>
+
+<body>
+
+  <div id="pageContainer">
+    <div id="sketchContainer"></div>
+    <div id="controlsContainer">
+      <label><font color="red">x:</font> <input id="xAxis" type="range" step="1" min="-100" max="100" /></label>
+      <label><font color="green">y:</font> <input id="yAxis" type="range" step="1" min="-100" max="100" /></label>
+      <label><font color="blue">z:</font> <input id="zAxis" type="range" step="1" min="-100" max="100" /></label>
+      <p id="axisText"></p>
+     <label style="color:black;">Reset Angles: <input id="Zeroangles" name="materialSelect" type="radio"/></label>
+      <label style="color:black;">Adjust Angles: <input id="Adjustangles" name="materialSelect" type="radio"/></label>
+    </div>
+</div>
+        
+    <p>[Note] X-axix (Red), Y-axis (Green), Z-axis (Blue)<br>
+        * Euler ZYX Convention (relative to the rotating frame)<br>
+        * XYZ Convention (relative to the fixed frame)<br>by Seung-Jae Kim</p>
+</body>
+
+</html>
